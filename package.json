@@ -1,6 +1,6 @@
 {
   "name": "graphql-playground-mock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Start GraphQL Playground Server in mock mode by specifying GraphQL Schema file",
   "author": "Nekoshita Yuki <yuki.303442@gmail.com> (https://twitter.com/nekoshita_yuki)",
   "bin": {
