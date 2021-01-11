@@ -1,0 +1,41 @@
+{
+  "name": "graphql-playground-mock",
+  "version": "0.1.1",
+  "description": "Start GraphQL Playground Server in mock mode by specifying GraphQL Schema file",
+  "author": "Nekoshita Yuki <yuki.303442@gmail.com> (https://twitter.com/nekoshita_yuki)",
+  "bin": {
+    "graphql-playground-mock": "dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekoshita/graphql-playground-mock.git"
+  },
+  "scripts": {
+    "build": "tsc -d",
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "graphql",
+    "playground",
+    "mock",
+    "schema"
+  ],
+  "bugs": {
+    "url": "https://github.com/nekoshita/graphql-playground-mock/issues"
+  },
+  "homepage": "https://github.com/nekoshita/graphql-playground-mock#readme",
+  "dependencies": {
+    "apollo-server": "^2.19.1",
+    "graphql-import": "^1.0.2",
+    "meow": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/meow": "^5.0.0",
+    "@types/node": "^14.14.17",
+    "typescript": "^4.1.3"
+  },
+  "license": "MIT"
+}
