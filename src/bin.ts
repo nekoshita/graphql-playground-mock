@@ -25,14 +25,14 @@ Options:
 
 const defaultPort = 4000
 
-interface IFlags extends Record<string, meow.AnyFlag> {
+export interface IFlags extends Record<string, meow.AnyFlag> {
   port: {
     type: "number"
     alias: string
   }
 }
 
-const getPortFromInput = (cli: meow.Result<IFlags>) => {
+export const getPortFromInput = (cli: meow.Result<IFlags>) => {
   if (Number.isNaN(cli.flags.port) || typeof cli.flags.port === 'undefined') {
     return defaultPort
   } else {
@@ -40,7 +40,7 @@ const getPortFromInput = (cli: meow.Result<IFlags>) => {
   }
 }
 
-const main = (cli: meow.Result<IFlags>) => {
+export const main = async (cli: meow.Result<IFlags>) => {
   const [filepath] = cli.input
 
   if (!filepath) {
@@ -50,7 +50,7 @@ const main = (cli: meow.Result<IFlags>) => {
 
   const port = getPortFromInput(cli)
 
-  server(filepath).listen(port).then(({ url }) => {
+  await server(filepath).listen(port).then(({ url }) => {
     console.log(`🚀 GraphQL Mock Server is ready at ${url}`)
   })
 }
