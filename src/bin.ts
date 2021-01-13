@@ -8,7 +8,7 @@ const cli = meow(
 Usage: 
   $ graphql-playground-mock FILE_PATH
 
-GraphQL Playground Server mocks givin GraphQL Schema file(File must be GraphQL SDL syntax) at http://localhost:4000 (by default)
+GraphQL Playground Server mocks givin GraphQL Schema file(.graphql or .json) at http://localhost:4000 (by default)
 
 Options:
   --port, -p      Output in JSON format (based on introspection query)
