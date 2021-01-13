@@ -49,6 +49,7 @@ describe('main', () => {
     const consoleLogMock = jest
       .spyOn(console, 'log')
       .mockImplementation(() => false)
+
     const serverMock = jest.spyOn(index, 'server')
 
     /**
@@ -76,7 +77,9 @@ describe('main', () => {
     const consoleLogMock = jest
       .spyOn(console, 'log')
       .mockImplementation(() => false)
-    const serverMock = jest.spyOn(index, 'server')
+
+    const server = index.server('filepath')
+    const serverMock = jest.spyOn(index, 'server').mockImplementation(() => server)
 
 
     /**
@@ -93,6 +96,8 @@ describe('main', () => {
     expect(consoleWarnMock).toBeCalledTimes(0)
     expect(consoleLogMock).toBeCalledTimes(1)
     expect(serverMock).toBeCalledTimes(1)
+
+    server.stop()
   })
 })
 
