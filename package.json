@@ -68,7 +68,7 @@
       "@semantic-release/npm"
     ],
     "branches": [
-      "master"
+      "main"
     ]
   },
   "commitlint": {
